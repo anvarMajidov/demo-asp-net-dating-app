@@ -23,11 +23,6 @@ namespace api.Controllers
         public async Task<IActionResult> GetUsers()
         {
             var users = await _context.AppUsers.ToListAsync();
-            var user = _context.AppUsers.Find(-1);
-
-            var b = 0;
-            var a = 1 / b;
-
             return Ok(users);
         }
 
